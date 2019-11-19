@@ -3,7 +3,7 @@ service: serverless
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: femasters
+  profile: monstercode
   region: us-west-1
   stage: dev
 
@@ -11,9 +11,18 @@ plugins:
   - serverless-offline
 
 functions:  
+  api:
+    handler: src/api/api.handler
+    events:
+      - http: GET /api
+
   todos:
     handler: src/api/todos.handler
+    events:
+      - http: GET /todos
     
   todo:
     handler: src/api/todo.handler
+    events:
+      - http: GET /todos/{id}
     
