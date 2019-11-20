@@ -6,6 +6,7 @@ const todos = [
 module.exports.handler = (event, ctx, done) => {
   const pathId = event.pathParameters.id
   const todo = todos.find(item => item.id === parseInt(pathId))
+  console.dir(ctx.clientContext)
   done(null, {
     statusCode: 200,
     body: JSON.stringify({data: todo})

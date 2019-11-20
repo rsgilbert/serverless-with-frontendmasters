@@ -3,9 +3,9 @@ service: serverless
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: monstercode
-  region: us-west-1
-  stage: dev
+  # profile: todo-serverless-profile
+  # region: us-west-1
+  # stage: dev
 
 plugins:
   - serverless-offline
