@@ -14,15 +14,16 @@ functions:
   api:
     handler: src/api/api.handler
     events:
-      - http: GET /api
+      - http: ANY /
+      - http: 'ANY /{param+}'
 
-  todos:
-    handler: src/api/todos.handler
-    events:
-      - http: GET /todos
+  # todos:
+  #   handler: src/api/todos.handler
+  #   events:
+  #     - http: GET /todos
     
-  todo:
-    handler: src/api/todo.handler
-    events:
-      - http: GET /todos/{id}
+  # todo:
+  #   handler: src/api/todo.handler
+  #   events:
+  #     - http: GET /todos/{id}
     
