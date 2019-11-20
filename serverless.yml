@@ -1,3 +1,5 @@
+org: gilberts
+app: todo-serverless
 service: serverless
 
 provider:
